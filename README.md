@@ -5,6 +5,59 @@
 
 ---
 
+## For Audiences: 5-Min Quick Start
+
+1. Open this repo:
+   - `https://github.com/cyh76507707/p7-vibe-coding-recipes`
+2. Copy the prompt below into your AI coding assistant.
+3. Replace placeholders:
+   - `[YOUR_REPO_URL]`
+   - `[YOUR_ISSUE_URL]`
+   - `[YOUR_ROLE]` (T1, T2, T3, T5, or T7)
+4. Ask the AI to follow the playbook exactly.
+5. Start work only after branch + status checks pass.
+
+### Copy-Paste Prompt (Audience Version)
+
+```text
+You are my AI collaborator. Follow this public playbook first:
+https://github.com/cyh76507707/p7-vibe-coding-recipes
+
+My context:
+- Project repo: [YOUR_REPO_URL]
+- Issue: [YOUR_ISSUE_URL]
+- Role: [YOUR_ROLE]
+
+Your job:
+1) Read and apply the workflow rules from the playbook link.
+2) Rehydrate from the issue first:
+   gh issue view [YOUR_ISSUE_URL] --comments
+3) Work in strict isolation:
+   one Issue -> one branch -> one PR
+4) Use branch format:
+   task/<issue-number>-<short-slug>
+5) Keep changes in scope only; do not edit unrelated files.
+6) Add PR body line:
+   Fixes #<issue-number>
+7) Do not push unless I explicitly say:
+   "Push now"
+
+Before coding, show me:
+- Your interpreted scope (3-5 bullets)
+- Planned files to change
+- Risks/assumptions
+
+After coding, show me:
+- What changed
+- Verification steps/results
+- PR-ready summary
+- Any follow-up issues needed
+
+If you cannot access the GitHub link directly, ask me to paste the README content and continue with the same rules.
+```
+
+---
+
 ## Zero-Paste Rule (Preferred)
 
 If the owner gives an **Issue URL**, do not ask for repeated background context.
